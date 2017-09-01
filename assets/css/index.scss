@@ -1,0 +1,139 @@
+body{
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height: 100vh;
+  background: url("../img/f.jpg");
+  background-size: 100%;
+  display: flex;
+}
+.contenido{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+
+
+  &_titulo{
+    background: #172D44;
+    width: 100%;
+    height:12%;
+    align-items: center;
+    border-bottom: 1px solid white;
+    line-height:2;
+    h1{
+      margin: 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &_app{
+    height:88%;
+    display: flex;
+
+    &_config{
+      background: #2A3F54;
+      width: 25%;
+      border-right: 1px solid white;
+      h2{
+        width: 80%;
+        text-align: center;
+        margin: 1em auto;
+      }
+      .input_box{
+        width: 80%;
+        text-align: center;
+        margin: .5em auto;
+        label{
+          display: block;
+          width: 100%;
+          text-align: center;
+          color: #FFFFFF;
+          line-height: 2;
+          font-size:1.2em;
+
+        }
+        input{
+          display: block;
+          background: #172D44;
+          margin: auto;
+          border: 0;
+          color: #FFFFFF;
+          width: 50%;
+          border-radius: 5%;
+          line-height: 1.5;
+          text-align: center;
+          &:hover,&:visited,&:focus,&:active{
+            outline:none;
+          }
+        }
+      }
+      #iniciar{
+        display: block;
+        transition: all .8s;
+        background: #1ABB9C;
+        border: 1px solid #1ABB9C;
+        color: #FFFFFF;
+        width: 60%;
+        line-height: 2;
+        font-size: 1em;
+        margin: 2em auto;
+        & init{
+          background: red;
+          transition: all .8s;
+        }
+        &:hover,&:visited,&:focus,&:active{
+          outline:none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_mapa{
+      background: rgba(#172D44,.8);
+      width:75%;
+      height:100%;
+      display: flex;
+      .tabla{
+        margin: auto;
+        padding: 0;
+        .fila{
+          display: flex;
+          .item{
+            display: block;
+            transition: all .5s;
+            color: white;
+            //background: rgba(#000,.5);
+            background-size:100% 100%;
+            box-sizing: border-box;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            box-sizing: border-box;
+            & activo:hover{
+              background: transparent !important;
+            }
+            &:hover{
+              background: #1ABB9C !important;
+              cursor: pointer;
+            }
+            & activa{
+              background: #1ABB9C;
+            transition: all .5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+h2{
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+ver{
+  background: #1ABB9C !important;
+}
