@@ -7,11 +7,11 @@ function init(numf,numi) {
     var mapaheight=mapa.height()/numf,mapawidth = mapa.width()/numi;
     console.log(mapa.height())
     var tabla = document.getElementById("tabla")
-    for(var x=0; x<numf ; x++){
+    for(var x=0; x<numf-1 ; x++){
         var nodeRen = document.createElement("div");
         nodeRen.className = "fila";
         nodeRen.innerHTML = "";
-        for (var y = 0; y<numi ; y++){
+        for (var y = 0; y<numi-1 ; y++){
             var node = document.createElement("div");
             node.className = "item";
             node.activo=false;

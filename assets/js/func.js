@@ -83,9 +83,30 @@ var run= function(ids) {
 
 
                         }
-                        trayec[ids]= new Array();
-                        agente.posicion = aux;
-                        agente.estado=1;
+
+                        // while(trayec[ids].length !=0){
+                        //
+                        //     console.log(auer)
+                        //     var addr = id.replace("%x",auer[0]).replace("%y",auer[1]);
+                        //     console.log(addr)
+                        //     $(addr).css({
+                        //         "background": "transparent"
+                        //     });
+                        //
+                        // }
+
+                        // for (var xe in trayec[ids]){
+                        //     var auer = trayec[ids][xe];
+                        //     console.log('=>>>>>: ' + auer);
+                        //
+                        // }
+                        else{
+                            trayec[ids]= new Array();
+                            agente.posicion = aux;
+                            agente.estado=1;
+                        }
+
+
                         break;
                     case 3:
                         console.log("esta obstaculo");
@@ -160,8 +181,9 @@ var run= function(ids) {
                     }
 
                     //if (aux!=agente.posicion){
-                        console.log("Se agrego")
+                        console.log("Se agrego al map")
                         trayec[ids].push(aux);
+
                     //}else{
                       //  console.log("no se agregp")
                     //}
@@ -219,7 +241,16 @@ var run= function(ids) {
                     break;
             }
 
+            if (trayec[ids].length > 0 ){
+                console.log(trayec[ids])
 
+                var eir = trayec[ids][(trayec[ids].length)-1];
+                var ad = id.replace("%x",eir[0]).replace("%y",eir[1]);
+                $(b).addClass("ver")
+                $(b).css({
+                    "background": "#1ABB9C"
+                });
+            }
 
 
             Concurrent.Thread.sleep(500)
